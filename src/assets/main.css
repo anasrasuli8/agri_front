@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #f9fafb;
+}
+:root {
+    /* --vs-search-input-bg: ; */
+    --vs-selected-bg: #9ca3af;
+    --vs-dropdown-option--active-bg: #9ca3af;
+    --vs-dropdown-min-width: 30px;
+}
+
+.vs__dropdown-toggle,
+.vs__dropdown-menu {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+}
+.vs__search::placeholder{
+    border: none;
+    padding-left: 0;
+    color: #6b7280;
+}
+.vs__dropdown-toggle{
+    padding: 0.5rem 0.75rem;
+}
+
+@media ( max-width: 640px){
+    .vs__clear{
+        display: none!important;
+    }
+    .v__custom .vs__selected-options{
+        padding: 0;
+    }
+    .v__custom .vs__search{
+        padding: 0;
+        padding-left: 2px;
+    }
+    .v__custom .vs__dropdown-toggle{
+        padding: 0.5rem 0;
+        padding-left: 0.5rem ;
+    }
+    .v__custom{
+        font-size: 0.875rem;
+        /* line-height: 1.25rem; */
+    }
+}
+
+.router-link-active{
+    @apply text-cgreen;
+}
+.router-link-exact-active{
+    @apply text-cgreen;
+}
